@@ -1,5 +1,19 @@
-alias ls="ls -G"
-export PATH=/usr/local/mysql/bin/:$PATH
+#
+# configuration
+#
+export EDITOR="vim";
+
+#
+# helper commands
+#
+alias ls='ls -G'
+alias lt='ls -ltrsa "$@" | tail'
+alias psgrep='ps axuf | grep -v grep | grep "$@" -i --color=auto'
+alias fname='find . -iname "*$@*"'
+
+#
+# PS1 and RPS1
+#
 
 if [ `whoami` = "root" ]; then
     PS1="%B%(?..[%?] )%b%F{red}%n%f@%U%m%u> "
@@ -13,7 +27,11 @@ precmd()
     if [ "$branch" != "" ]; then
 	    RPS1="%F{red}$branch %F{green}%~%f"
     else
-        PS1="%F{green}%~%f"
+        RPS1="%F{green}%~%f"
     fi
 }
+
+#
+# custom flags
+#
 
