@@ -1,0 +1,5 @@
+xterm*background: gray24
+xterm*foreground: white
+
+urxvt*background: gray24
+urxvt*foreground: white
