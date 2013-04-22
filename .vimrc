@@ -396,3 +396,6 @@ endfunction
 
 " show line numbers
 set nu
+
+" for when i accidentally type ":W"
+cnoreabbrev W w
