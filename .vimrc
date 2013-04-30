@@ -399,3 +399,6 @@ set nu
 
 " for when i accidentally type ":W"
 cnoreabbrev W w
+
+" folds
+set fdm=indent
